@@ -2,7 +2,12 @@
 title: "HW #4.3: Reproducible Data Analysis"
 author: "Pragya Sinha"
 date: "April 15, 2026"
-format: "pdf"
+date-modified: "April 15, 2026"
+format: pdf
+execute:
+  echo: false
+  warning: false
+  message: false
 ---
 
 # Busiest Airports Analysis
