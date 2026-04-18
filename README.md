@@ -1,5 +1,5 @@
 # HW-4.4-Github-Practice
-This repository contains my work for HW #4.3, which focuses on reproducible data analysis using R and Quarto. This project includes the deliverables I turned in for HW #4.3, including the QMD file and the rendered PDF output.
+This repository contains my work for HW #4.3, which focuses on reproducible data analysis using R and Quarto. In the assignment, I was tasked with turning my code for two different projects into a cohesive report that explained my findings clearly. This project includes the deliverables I turned in for HW #4.3, including the QMD file and the rendered PDF output.
 
 My Plan
 
