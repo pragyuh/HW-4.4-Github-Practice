@@ -1,12 +1,12 @@
 # HW-4.4-Github-Practice
-This repository contains my work for HW #4.3, which focuses on reproducible data anlysis using R and Quarto. This project includes the deliverables I turned in to HW #4.3.
+This repository contains my work for HW #4.3, which focuses on reproducible data analysis using R and Quarto. This project includes the deliverables I turned in to HW #4.3.
 
 My Plan
 
 Repository Management:
 1. Use branches for new features and updates
 2. Commit changes regularly with clear messages
-3. Use issues to track tasks and improvmements
+3. Use issues to track tasks and improvements
 
 HW #4.3 Plan:
 1. Analyze airport passenger data using tables and graphs
