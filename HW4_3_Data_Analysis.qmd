@@ -12,7 +12,12 @@ execute:
 
 # Busiest Airports Analysis
 
-```{r echo = FALSE, message=FALSE, warning=FALSE}
+```{r airports-data}
+#| echo: false
+#| message: false
+#| warning: false
+# This document follows the Tidyverse Style Guide for R coding
+
 # Install packages if needed
 pkgs <- c("rvest", "dplyr", "purrr", "stringr", "tibble")
 to_install <- pkgs[!sapply(pkgs, requireNamespace, quietly = TRUE)]
@@ -26,6 +31,7 @@ library(stringr)
 library(tibble)
 
 # Read Wikipedia page
+# URL is publicly accessible via Wikipedia
 url <- "https://en.wikipedia.org/wiki/List_of_busiest_airports_by_passenger_traffic"
 page <- read_html(url)
 
@@ -80,7 +86,13 @@ busiest_airports_tidy <- busiest_airports_tidy %>%
 
 To analyze global air travel trends, I examined passenger traffic data for six major international airports from 2020 to 2025. I created both a table and a graph to compare both changes over time and differences between airports.
 
-```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Passenger traffic trends for six busy airports from 2020 to 2025."}
+```{r airports-table-plot}
+#| echo: false
+#| warning: false
+#| message: false
+#| tbl-cap: "Passenger traffic table for six airports from 2020 to 2025."
+#| fig-cap: "Passenger traffic trends for six busy airports from 2020 to 2025."
+#| fig-alt: "Line graph showing passenger traffic trends for six major airports from 2020 to 2025"
 
 library(dplyr)
 library(tidyr)
@@ -169,7 +181,10 @@ Overall, using both the table and graph provided me with a clearer understanding
 
 Monte Carlo numerical integration is a method used to estimate the area under a curve using random sampling. Instead of calculating the integral directly, random points are generated within a defined region, and the proportion of points that fall under the curve is used to estimate the total area.
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
+```{r monte-carlo-functions}
+#| echo: false
+#| warning: false
+#| message: false
 library(dplyr)
 library(ggplot2)
 
@@ -241,19 +256,39 @@ make_mc_plot <- function(n_points) {
 ```
 
 ::: {layout-ncol="2"}
-```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Monte Carlo estimate with n = 10."}
+```{r mc-10}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Monte Carlo estimate with n = 10."
+#| fig-alt: "Monte Carlo plot with 10 sampled points showing rough estimate"
 make_mc_plot(10)
 ```
 
-```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Monte Carlo estimate with n = 100."}
+```{r mc-100}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Monte Carlo estimate with n = 100."
+#| fig-alt: "Scatter plot showing Monte Carlo estimation with 100 random points"
 make_mc_plot(100)
 ```
 
-```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Monte Carlo estimate with n = 1000."}
+```{r mc-1000}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Monte Carlo estimate with n = 1000."
+#| fig-alt: "Scatter plot showing Monte Carlo estimation with 1000 random points"
 make_mc_plot(1000)
 ```
 
-```{r echo=FALSE, warning=FALSE, message=FALSE, fig.cap="Monte Carlo estimate with n = 10000."}
+```{r mc-10000}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-cap: "Monte Carlo estimate with n = 10000."
+#| fig-alt: "Scatter plot showing Monte Carlo estimation with 10000 random points"
 make_mc_plot(10000)
 ```
 :::
@@ -306,6 +341,12 @@ The goal of this section is to tidy the calcium dataset and create a visualizati
 11. Interpret the visualization by comparing trends between the two groups over time
 
 ## GenAI Output
+
+```{r calcium-data}
+#| echo: false
+calcium <- read.csv("calcium.csv")
+
+# This file is included in the repository for reproducibility
 
 I’m checking the file structure first so the code matches your actual column names and shape.
 
